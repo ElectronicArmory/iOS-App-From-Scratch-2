@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18G103" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ClimbingLocation" representedClassName="ClimbingLocation" syncable="YES" codeGenerationType="class">
+        <attribute name="altitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="ClimbingRoute" representedClassName="ClimbingRoute" syncable="YES" codeGenerationType="class">
+        <attribute name="routeDifficulty" attributeType="String" defaultValueString="5.7"/>
+        <attribute name="routeDifficultySub" optional="YES" attributeType="String"/>
+        <attribute name="routeName" attributeType="String"/>
+        <attribute name="routeNotes" optional="YES" attributeType="String"/>
+        <relationship name="crag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Crag" inverseName="climbingRoutes" inverseEntity="Crag"/>
+        <relationship name="routeLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClimbingLocation"/>
+    </entity>
+    <entity name="Crag" representedClassName="Crag" syncable="YES" codeGenerationType="class">
+        <attribute name="cragName" optional="YES" attributeType="String"/>
+        <attribute name="cragNotes" optional="YES" attributeType="String"/>
+        <relationship name="climbingRoutes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClimbingRoute" inverseName="crag" inverseEntity="ClimbingRoute"/>
+        <relationship name="cragLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClimbingLocation"/>
+    </entity>
+    <elements>
+        <element name="Crag" positionX="-65.953125" positionY="-73.2890625" width="128" height="103"/>
+        <element name="ClimbingRoute" positionX="248.5078125" positionY="-103.0234375" width="128" height="133"/>
+        <element name="ClimbingLocation" positionX="70.40625" positionY="141.58203125" width="128" height="88"/>
+    </elements>
+</model>
