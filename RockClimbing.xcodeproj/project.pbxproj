@@ -16,6 +16,8 @@
 		14823F17235E0F6700206995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14823F16235E0F6700206995 /* Assets.xcassets */; };
 		14823F1A235E0F6700206995 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14823F18235E0F6700206995 /* LaunchScreen.storyboard */; };
 		14823F22235E14A500206995 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14823F21235E14A500206995 /* DatabaseController.swift */; };
+		148F58F32371E430001E54F7 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F58F22371E430001E54F7 /* LocationController.swift */; };
+		148F58F52371E996001E54F7 /* CragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F58F42371E996001E54F7 /* CragViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		14823F19235E0F6700206995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14823F1B235E0F6700206995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14823F21235E14A500206995 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
+		148F58F22371E430001E54F7 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		148F58F42371E996001E54F7 /* CragViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CragViewController.swift; sourceTree = "<group>"; };
 		59587A75F20E18DCE2F4EE6F /* Pods-RockClimbing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RockClimbing.release.xcconfig"; path = "Target Support Files/Pods-RockClimbing/Pods-RockClimbing.release.xcconfig"; sourceTree = "<group>"; };
 		713C3021541F210B864E3BEF /* Pods-RockClimbing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RockClimbing.debug.xcconfig"; path = "Target Support Files/Pods-RockClimbing/Pods-RockClimbing.debug.xcconfig"; sourceTree = "<group>"; };
 		DA6668FCBA7DEB4A3ADB08F8 /* Pods_RockClimbing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RockClimbing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,12 +74,14 @@
 				14823F0A235E0F6500206995 /* AppDelegate.swift */,
 				14823F0C235E0F6500206995 /* SceneDelegate.swift */,
 				14823F0E235E0F6500206995 /* ViewController.swift */,
+				148F58F42371E996001E54F7 /* CragViewController.swift */,
 				14823F10235E0F6500206995 /* Main.storyboard */,
 				14823F16235E0F6700206995 /* Assets.xcassets */,
 				14823F18235E0F6700206995 /* LaunchScreen.storyboard */,
 				14823F1B235E0F6700206995 /* Info.plist */,
 				14823F13235E0F6500206995 /* RockClimbing.xcdatamodeld */,
 				14823F21235E14A500206995 /* DatabaseController.swift */,
+				148F58F22371E430001E54F7 /* LocationController.swift */,
 			);
 			path = RockClimbing;
 			sourceTree = "<group>";
@@ -196,8 +202,10 @@
 			files = (
 				14823F22235E14A500206995 /* DatabaseController.swift in Sources */,
 				14823F0F235E0F6500206995 /* ViewController.swift in Sources */,
+				148F58F32371E430001E54F7 /* LocationController.swift in Sources */,
 				14823F15235E0F6500206995 /* RockClimbing.xcdatamodeld in Sources */,
 				14823F0B235E0F6500206995 /* AppDelegate.swift in Sources */,
+				148F58F52371E996001E54F7 /* CragViewController.swift in Sources */,
 				14823F0D235E0F6500206995 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
