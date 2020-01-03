@@ -14,22 +14,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     var fetchResults:[Crag] = []
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        LocationController.startMonitoringLocation()
         
+        fetchCragResults()
+    }
+
+    
+    
+    
+    @IBAction func addCragTapped(_ sender: Any) {
         
+        let cragViewController = storyboard?.instantiateViewController(identifier: String(describing: ModifyCragViewController.self)) as! ModifyCragViewController
+        
+        navigationController?.pushViewController(cragViewController, animated: true)
+    }
+    
+    
+    fileprivate func fetchCragResults() {
         let context = DatabaseController.persistentStoreContainer().viewContext
-        
-//        let newCrag = Crag(context: context)
-//        newCrag.cragName = "Another crag location"
-//        newCrag.cragNotes = "new notes go here"
-//
-//        newCrag.cragLocation = ClimbingLocation(context: context)
-//        newCrag.cragLocation?.latitude = 123.54
-//        newCrag.cragLocation?.longitude = 321.985
-//
-//        DatabaseController.saveContext()
-        
         
         let fetchRequest:NSFetchRequest = Crag.fetchRequest()
         
@@ -40,13 +51,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print(error)
         }
         
+        tableView.reloadData()
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        LocationController.startMonitoringLocation()
-    }
-
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchResults.count
